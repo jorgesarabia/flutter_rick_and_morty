@@ -27,15 +27,13 @@ class _$CharacterModelTearOff {
       required String name,
       required String status,
       required String species,
-      required String image,
-      required List<String> episode}) {
+      required String image}) {
     return _CharacterModel(
       id: id,
       name: name,
       status: status,
       species: species,
       image: image,
-      episode: episode,
     );
   }
 
@@ -54,7 +52,6 @@ mixin _$CharacterModel {
   String get status => throw _privateConstructorUsedError;
   String get species => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
-  List<String> get episode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,13 +64,7 @@ abstract class $CharacterModelCopyWith<$Res> {
   factory $CharacterModelCopyWith(
           CharacterModel value, $Res Function(CharacterModel) then) =
       _$CharacterModelCopyWithImpl<$Res>;
-  $Res call(
-      {int id,
-      String name,
-      String status,
-      String species,
-      String image,
-      List<String> episode});
+  $Res call({int id, String name, String status, String species, String image});
 }
 
 /// @nodoc
@@ -92,7 +83,6 @@ class _$CharacterModelCopyWithImpl<$Res>
     Object? status = freezed,
     Object? species = freezed,
     Object? image = freezed,
-    Object? episode = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -115,10 +105,6 @@ class _$CharacterModelCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      episode: episode == freezed
-          ? _value.episode
-          : episode // ignore: cast_nullable_to_non_nullable
-              as List<String>,
     ));
   }
 }
@@ -130,13 +116,7 @@ abstract class _$CharacterModelCopyWith<$Res>
           _CharacterModel value, $Res Function(_CharacterModel) then) =
       __$CharacterModelCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {int id,
-      String name,
-      String status,
-      String species,
-      String image,
-      List<String> episode});
+  $Res call({int id, String name, String status, String species, String image});
 }
 
 /// @nodoc
@@ -157,7 +137,6 @@ class __$CharacterModelCopyWithImpl<$Res>
     Object? status = freezed,
     Object? species = freezed,
     Object? image = freezed,
-    Object? episode = freezed,
   }) {
     return _then(_CharacterModel(
       id: id == freezed
@@ -180,10 +159,6 @@ class __$CharacterModelCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      episode: episode == freezed
-          ? _value.episode
-          : episode // ignore: cast_nullable_to_non_nullable
-              as List<String>,
     ));
   }
 }
@@ -196,8 +171,7 @@ class _$_CharacterModel implements _CharacterModel {
       required this.name,
       required this.status,
       required this.species,
-      required this.image,
-      required this.episode});
+      required this.image});
 
   factory _$_CharacterModel.fromJson(Map<String, dynamic> json) =>
       _$$_CharacterModelFromJson(json);
@@ -212,12 +186,10 @@ class _$_CharacterModel implements _CharacterModel {
   final String species;
   @override
   final String image;
-  @override
-  final List<String> episode;
 
   @override
   String toString() {
-    return 'CharacterModel(id: $id, name: $name, status: $status, species: $species, image: $image, episode: $episode)';
+    return 'CharacterModel(id: $id, name: $name, status: $status, species: $species, image: $image)';
   }
 
   @override
@@ -229,8 +201,7 @@ class _$_CharacterModel implements _CharacterModel {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality().equals(other.status, status) &&
             const DeepCollectionEquality().equals(other.species, species) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other.episode, episode));
+            const DeepCollectionEquality().equals(other.image, image));
   }
 
   @override
@@ -240,8 +211,7 @@ class _$_CharacterModel implements _CharacterModel {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(status),
       const DeepCollectionEquality().hash(species),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(episode));
+      const DeepCollectionEquality().hash(image));
 
   @JsonKey(ignore: true)
   @override
@@ -260,8 +230,7 @@ abstract class _CharacterModel implements CharacterModel {
       required String name,
       required String status,
       required String species,
-      required String image,
-      required List<String> episode}) = _$_CharacterModel;
+      required String image}) = _$_CharacterModel;
 
   factory _CharacterModel.fromJson(Map<String, dynamic> json) =
       _$_CharacterModel.fromJson;
@@ -276,8 +245,6 @@ abstract class _CharacterModel implements CharacterModel {
   String get species;
   @override
   String get image;
-  @override
-  List<String> get episode;
   @override
   @JsonKey(ignore: true)
   _$CharacterModelCopyWith<_CharacterModel> get copyWith =>

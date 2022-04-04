@@ -11,7 +11,6 @@ class CharacterModel with _$CharacterModel {
     required String status,
     required String species,
     required String image,
-    required List<String> episode,
   }) = _CharacterModel;
 
   factory CharacterModel.fromJson(Map<String, dynamic> json) => _$CharacterModelFromJson(json);

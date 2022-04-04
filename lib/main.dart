@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_rick_and_morty/core/injectable.dart';
 import 'package:flutter_rick_and_morty/presentation/screen/home/home_screen.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  configureInjection();
   runApp(const MyApp());
 }
 

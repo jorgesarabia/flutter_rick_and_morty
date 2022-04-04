@@ -13,8 +13,6 @@ _$_CharacterModel _$$_CharacterModelFromJson(Map<String, dynamic> json) =>
       status: json['status'] as String,
       species: json['species'] as String,
       image: json['image'] as String,
-      episode:
-          (json['episode'] as List<dynamic>).map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$$_CharacterModelToJson(_$_CharacterModel instance) =>
@@ -24,5 +22,4 @@ Map<String, dynamic> _$$_CharacterModelToJson(_$_CharacterModel instance) =>
       'status': instance.status,
       'species': instance.species,
       'image': instance.image,
-      'episode': instance.episode,
     };
