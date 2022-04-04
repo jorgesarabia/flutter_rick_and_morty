@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
             print('Algo');
             final repo = getIt.get<ICharacterRepository>();
             final answer = await repo.getAll(1.toString());
+            print(answer);
           },
           child: const Text('Try'),
         ),

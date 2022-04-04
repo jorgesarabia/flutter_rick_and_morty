@@ -23,7 +23,7 @@ class _$CharacterModelTearOff {
   const _$CharacterModelTearOff();
 
   _CharacterModel call(
-      {required int id,
+      {required String id,
       required String name,
       required String status,
       required String species,
@@ -47,7 +47,7 @@ const $CharacterModel = _$CharacterModelTearOff();
 
 /// @nodoc
 mixin _$CharacterModel {
-  int get id => throw _privateConstructorUsedError;
+  String get id => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String get status => throw _privateConstructorUsedError;
   String get species => throw _privateConstructorUsedError;
@@ -64,7 +64,8 @@ abstract class $CharacterModelCopyWith<$Res> {
   factory $CharacterModelCopyWith(
           CharacterModel value, $Res Function(CharacterModel) then) =
       _$CharacterModelCopyWithImpl<$Res>;
-  $Res call({int id, String name, String status, String species, String image});
+  $Res call(
+      {String id, String name, String status, String species, String image});
 }
 
 /// @nodoc
@@ -88,7 +89,7 @@ class _$CharacterModelCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -116,7 +117,8 @@ abstract class _$CharacterModelCopyWith<$Res>
           _CharacterModel value, $Res Function(_CharacterModel) then) =
       __$CharacterModelCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String name, String status, String species, String image});
+  $Res call(
+      {String id, String name, String status, String species, String image});
 }
 
 /// @nodoc
@@ -142,7 +144,7 @@ class __$CharacterModelCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -177,7 +179,7 @@ class _$_CharacterModel implements _CharacterModel {
       _$$_CharacterModelFromJson(json);
 
   @override
-  final int id;
+  final String id;
   @override
   final String name;
   @override
@@ -226,7 +228,7 @@ class _$_CharacterModel implements _CharacterModel {
 
 abstract class _CharacterModel implements CharacterModel {
   factory _CharacterModel(
-      {required int id,
+      {required String id,
       required String name,
       required String status,
       required String species,
@@ -236,7 +238,7 @@ abstract class _CharacterModel implements CharacterModel {
       _$_CharacterModel.fromJson;
 
   @override
-  int get id;
+  String get id;
   @override
   String get name;
   @override

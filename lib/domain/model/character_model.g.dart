@@ -8,7 +8,7 @@ part of 'character_model.dart';
 
 _$_CharacterModel _$$_CharacterModelFromJson(Map<String, dynamic> json) =>
     _$_CharacterModel(
-      id: json['id'] as int,
+      id: json['id'] as String,
       name: json['name'] as String,
       status: json['status'] as String,
       species: json['species'] as String,

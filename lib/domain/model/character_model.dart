@@ -6,7 +6,7 @@ part 'character_model.g.dart';
 @freezed
 class CharacterModel with _$CharacterModel {
   factory CharacterModel({
-    required int id,
+    required String id,
     required String name,
     required String status,
     required String species,

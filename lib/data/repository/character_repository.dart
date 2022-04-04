@@ -1,4 +1,5 @@
 import 'package:flutter_rick_and_morty/domain/model/character_model.dart';
+import 'package:flutter_rick_and_morty/domain/model/character_response.dart';
 import 'package:flutter_rick_and_morty/domain/repository/i_character_repository.dart';
 import 'package:graphql/client.dart';
 import 'package:injectable/injectable.dart';
@@ -17,6 +18,11 @@ class CharacterRepository implements ICharacterRepository {
 
     if (result.hasException) {
       print(result.exception.toString());
+    }
+
+    if (result.data != null) {
+      final response = CharacterResponse.fromJson(result.data!['characters']);
+      return response.results;
     }
 
     return [];
